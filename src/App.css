@@ -1,0 +1,5824 @@
+@import url("https://fonts.cdnfonts.com/css/space-mono");
+@import url("https://fonts.cdnfonts.com/css/russo-one");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/JuraDemiBold.woff2") format("woff2"),
+    url("./fonts/JuraDemiBold.woff") format("woff"),
+    url("./fonts/JuraDemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/JuraMedium.woff2") format("woff2"),
+    url("./fonts/JuraMedium.woff") format("woff"),
+    url("./fonts/JuraMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/JuraBook.woff2") format("woff2"),
+    url("./fonts/JuraBook.woff") format("woff"),
+    url("./fonts/JuraBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/JuraLight.woff2") format("woff2"),
+    url("./fonts/JuraLight.woff") format("woff"),
+    url("./fonts/JuraLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo-SemiBold.woff2") format("woff2"),
+    url("./fonts/Archivo-SemiBold.woff") format("woff"),
+    url("./fonts/Archivo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo-SemiBoldItalic.woff2") format("woff2"),
+    url("./fonts/Archivo-SemiBoldItalic.woff") format("woff"),
+    url("./fonts/Archivo-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/RussoOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.center-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
+}
+
+.nft-banner {
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+  border: 2px solid #ff6600;
+  border-radius: 16px;
+  padding: 20px 32px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.3);
+}
+
+.nft-banner .glow {
+  font-size: 1.8rem;
+  color: #ff6600;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 5px #ff6600a2, 0 0 10px #ff6600ab;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #ff6600a4, 0 0 20px #ff660094;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #ff66009d, 0 0 10px #ff660086;
+  }
+}
+
+/* Optional: Style scrollbar */
+.nft-gridNew::-webkit-scrollbar {
+  height: 8px;
+}
+
+.nft-gridNew::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nft-gridNew::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.nft-gridNew::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.nft-gridNew {
+  display: flex;
+  /* Changed from grid to flex */
+  gap: 10px;
+  padding: 10px 0;
+  /* Add some vertical padding */
+  overflow-x: auto;
+  /* Horizontal scrolling */
+  overflow-y: hidden;
+  /* Prevent vertical scrolling */
+  white-space: nowrap;
+  /* Prevent items from wrapping */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+}
+
+.popupInNew {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  max-width: 90vw;
+  /* Add this for better mobile responsiveness */
+  max-height: 90vh;
+  /* Limit height */
+  overflow: hidden;
+  /* Prevent overall scrolling */
+  animation: slideIn 0.3s ease-out;
+  background: rgba(255, 255, 255, 0.397);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.popup-containerIn--2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.781);
+  /* Changed to solid black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleR {
+  color: #00ff66;
+  text-align: center;
+  font-size: 24px;
+}
+
+.checkAccess {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Scrollbar Styling */
+.nft-overlay::-webkit-scrollbar {
+  width: 12px;
+  /* Thicker scrollbar */
+}
+
+.nft-overlay::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  /* Darker track background */
+  border-radius: 10px;
+}
+
+.nft-overlay::-webkit-scrollbar-thumb {
+  background: #00ff66;
+  /* Green scrollbar */
+  border-radius: 10px;
+  border: 4px solid #1a1a1a;
+  /* Creates spacing */
+}
+
+.nft-overlay::-webkit-scrollbar-thumb:hover {
+  background: #02e25f;
+  /* Lighter green on hover */
+}
+
+/* Scrollbar Styling */
+.nft-overlay--2::-webkit-scrollbar {
+  width: 12px;
+  /* Thicker scrollbar */
+}
+
+.nft-overlay--2::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  /* Darker track background */
+  border-radius: 10px;
+}
+
+.nft-overlay--2::-webkit-scrollbar-thumb {
+  background: #00ff66;
+  /* Green scrollbar */
+  border-radius: 10px;
+  border: 4px solid #1a1a1a;
+  /* Creates spacing */
+}
+
+.nft-overlay--2::-webkit-scrollbar-thumb:hover {
+  background: #02e25f;
+  /* Lighter green on hover */
+}
+
+body,
+html {
+  font-weight: normal;
+
+  font-family: "Jura" !important;
+}
+
+body {
+  background-color: #000;
+}
+
+:root {
+  --btn-theme: #21e786;
+  --btn-enter: #fd0000;
+  --bg-color: #1c1c1c;
+  --btn-orange: #07ac4b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo" !important;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 499px) {
+  .nft-overlay--2 {
+    top: 20%;
+    left: 2%;
+    width: 99%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .showNftsSection {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
+    /* Alternative approach - you can use one of these based on your preference */
+    /* For exactly centering 1-4 items: */
+    /* grid-template-columns: repeat(auto-fit, 130px); */
+  }
+
+  /* Additional centering for single NFT */
+  .showNftsSection[data-count="1"] {
+    grid-template-columns: 140px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .showNftsSection[data-count="2"] {
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    width: 140px;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .checkAccess2 {
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 7px;
+    font-weight: normal;
+    margin-top: -100px;
+    color: white;
+  }
+
+  .connectNew {
+    width: 60px;
+    /* Or any fixed size */
+    height: 60px;
+    padding: 0;
+    /* Remove padding to maintain perfect circle */
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.171);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+  }
+
+  #forPc {
+    display: none;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #00ff75;
+    border: 2px solid;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+
+  .refresg-overlay {
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(48,192,108);
+    background: linear-gradient(90deg, rgba(48,192,108,1) 0%, rgba(26,103,59,1) 51%, rgba(0,17,7,1) 100%);*/
+    color: rgb(179, 179, 179);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .blurred {
+    filter: blur(5px);
+  }
+
+  .showBtn {
+    background-color: transparent;
+    border: #00ff75 1px solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  .txtR {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+  }
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+
+  .load {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .load2 {
+    text-align: center;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .in-header {
+    color: white;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Wrpperr {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .set-image {
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #box1 {
+    margin-bottom: 20px;
+  }
+
+  .wrapperMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapperMain2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headerH1 {
+    font-size: 28px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+  }
+
+  #fontH {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .connect {
+    background-color: #02e25f;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+  }
+
+  .connect:hover {
+    background-color: #009e42;
+  }
+
+  .menu-item img {
+    width: 25px;
+  }
+
+  /* Inventory Container */
+  .inventory-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    border: #02e25f 1.5px solid;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .inventory-container2 {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #02e25f 1.5px solid;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* 
+  /* Background Image */
+  .inventory-image {
+    height: auto;
+    margin: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+  }
+
+  .lineImg {
+    width: 100%;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .boxWraper {
+    margin-bottom: 70px;
+    width: 100%;
+  }
+
+  .nft-overlay2 {
+    position: absolute;
+    top: 21%;
+    left: 4.2%;
+    width: 80%;
+  }
+
+  .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+  }
+
+  /* Additional centering for single NFT */
+  .nft-grid[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .nft-grid[data-count="2"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  .choose {
+    color: #00ff75;
+    font-size: 16px;
+  }
+
+  .choose2 {
+    color: #00ff75;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  /* NFT Image */
+  .nft-image {
+    width: 190px;
+    height: auto;
+  }
+
+  /* NFT Text */
+  .nft-text {
+    font-size: 13px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .popup-containerIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dd {
+    z-index: 7;
+  }
+
+  .popup-containerIn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .popupIn {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding: 20px;
+    padding: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .popupIn h2 {
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "American Captain", sans-serif;
+  }
+
+  .popupIn img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .listBtn {
+    padding: 10px;
+    background-color: #04c253;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .listBtn:hover {
+    background: #00973f;
+  }
+
+  .popup-closeIn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .popupInTxt {
+    color: white;
+    font-size: 18px;
+  }
+
+  .successMsg {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    text-align: center;
+    color: #ffeded;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  #checkImg {
+    width: 130px;
+  }
+
+  .removeSection {
+    flex-flow: column nowrap;
+    background-color: #2222224d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .removeSection img {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+  .removeSection button {
+    background-color: #21e786;
+    color: rgb(15, 15, 15);
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .removeSection button:hover {
+    background-color: #069751;
+  }
+
+  .removeSection button:active {
+    background-color: #02e25f;
+  }
+
+  .connectNetwork {
+    background-color: #069751;
+    width: 250px;
+    text-align: center;
+    display: block;
+    border: none;
+    color: snow;
+    transition: 0.2 ease-in-out;
+  }
+
+  .connectNetwork:hover {
+    background-color: #07b963;
+  }
+
+  .backMsg {
+    z-index: 100000;
+    position: relative;
+    color: white;
+  }
+
+  .upgrades {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #02e25f;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+  }
+
+  .ldtxt {
+    color: #07b963;
+  }
+
+  .traitUpgrade {
+    background-color: #00ff75;
+    border: none;
+    padding: 7px;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .traitUpgrade:hover {
+    background-color: #03d163;
+  }
+
+  .traitUpgrade:active {
+    background-color: #029e4b;
+  }
+
+  .traitUpgradeMain {
+    background-color: #131313;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .upgrades:hover {
+    background-color: #009e42;
+    color: rgb(255, 255, 255);
+  }
+
+  .view {
+    color: white;
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .view span {
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .view img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+    width: 90%;
+  }
+
+  #popup-img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  #generatedImage {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .popup-closeInImg {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .nft-overlay--2 {
+    top: 20%;
+    left: 2%;
+    width: 99%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .showNftsSection {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
+    /* Alternative approach - you can use one of these based on your preference */
+    /* For exactly centering 1-4 items: */
+    /* grid-template-columns: repeat(auto-fit, 130px); */
+  }
+
+  /* Additional centering for single NFT */
+  .showNftsSection[data-count="1"] {
+    grid-template-columns: 170px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .showNftsSection[data-count="3"] {
+    grid-template-columns: repeat(2, 170px);
+    justify-content: center;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    width: 170px;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .checkAccess2 {
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 7px;
+    font-weight: normal;
+    margin-top: -100px;
+    color: white;
+  }
+
+  .connectNew {
+    width: 60px;
+    /* Or any fixed size */
+    height: 60px;
+    padding: 0;
+    /* Remove padding to maintain perfect circle */
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.171);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+  }
+
+  #forPc {
+    display: none;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #00ff75;
+    border: 2px solid;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+
+  .refresg-overlay {
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(48,192,108);
+    background: linear-gradient(90deg, rgba(48,192,108,1) 0%, rgba(26,103,59,1) 51%, rgba(0,17,7,1) 100%);*/
+    color: rgb(179, 179, 179);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .blurred {
+    filter: blur(5px);
+  }
+
+  .showBtn {
+    background-color: transparent;
+    border: #00ff75 1px solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  .txtR {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+  }
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+
+  .load {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .load2 {
+    text-align: center;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .in-header {
+    color: white;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Wrpperr {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .set-image {
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #box1 {
+    margin-bottom: 20px;
+  }
+
+  .wrapperMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapperMain2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headerH1 {
+    font-size: 28px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+  }
+
+  #fontH {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .connect {
+    background-color: #02e25f;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+  }
+
+  .connect:hover {
+    background-color: #009e42;
+  }
+
+  .menu-item img {
+    width: 25px;
+  }
+
+  /* Inventory Container */
+  .inventory-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    border: #02e25f 1.5px solid;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .inventory-container2 {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #02e25f 1.5px solid;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* Background Image */
+  .inventory-image {
+    height: auto;
+    margin: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+  }
+
+  .lineImg {
+    width: 100%;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .boxWraper {
+    margin-bottom: 70px;
+    width: 100%;
+  }
+
+  .boxWraper2 {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .nft-overlay {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+  }
+
+  .nft-overlay2 {
+    position: absolute;
+    top: 21%;
+    left: 4.2%;
+    width: 80%;
+  }
+
+  .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+    height: fit-content;
+  }
+
+  /* Additional centering for single NFT */
+  .nft-grid[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .nft-grid[data-count="2"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  .choose {
+    color: #00ff75;
+    font-size: 16px;
+  }
+
+  .choose2 {
+    color: #00ff75;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  /* NFT Image */
+  .nft-image {
+    width: 190px;
+    height: auto;
+  }
+
+  /* NFT Text */
+  .nft-text {
+    font-size: 13px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .popup-containerIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dd {
+    z-index: 7;
+  }
+
+  .popup-containerIn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .popupIn {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding: 20px;
+    padding: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .popupIn h2 {
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "American Captain", sans-serif;
+  }
+
+  .popupIn img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .listBtn {
+    padding: 10px;
+    background-color: #04c253;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .listBtn:hover {
+    background: #00973f;
+  }
+
+  .popup-closeIn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .popupInTxt {
+    color: white;
+    font-size: 18px;
+  }
+
+  .successMsg {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    text-align: center;
+    color: #ffeded;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  #checkImg {
+    width: 130px;
+  }
+
+  .removeSection {
+    flex-flow: column nowrap;
+    background-color: #2222224d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .removeSection img {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+  .removeSection button {
+    background-color: #21e786;
+    color: rgb(15, 15, 15);
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .removeSection button:hover {
+    background-color: #069751;
+  }
+
+  .removeSection button:active {
+    background-color: #02e25f;
+  }
+
+  .connectNetwork {
+    background-color: #069751;
+    width: 250px;
+    text-align: center;
+    display: block;
+    border: none;
+    color: snow;
+    transition: 0.2 ease-in-out;
+  }
+
+  .connectNetwork:hover {
+    background-color: #07b963;
+  }
+
+  .backMsg {
+    z-index: 100000;
+    position: relative;
+    color: white;
+  }
+
+  .upgrades {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #02e25f;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+  }
+
+  .ldtxt {
+    color: #07b963;
+  }
+
+  .traitUpgrade {
+    background-color: #00ff75;
+    border: none;
+    padding: 7px;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .traitUpgrade:hover {
+    background-color: #03d163;
+  }
+
+  .traitUpgrade:active {
+    background-color: #029e4b;
+  }
+
+  .traitUpgradeMain {
+    background-color: #131313;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .upgrades:hover {
+    background-color: #009e42;
+    color: rgb(255, 255, 255);
+  }
+
+  .view {
+    color: white;
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .view span {
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .view img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+    width: 90%;
+  }
+
+  #popup-img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  #generatedImage {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .popup-closeInImg {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .nft-overlay--2 {
+    top: 20%;
+    left: 2%;
+    width: 99%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .showNftsSection {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
+    /* Alternative approach - you can use one of these based on your preference */
+    /* For exactly centering 1-4 items: */
+    /* grid-template-columns: repeat(auto-fit, 130px); */
+  }
+
+  /* Additional centering for single NFT */
+  .showNftsSection[data-count="1"] {
+    grid-template-columns: 170px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .showNftsSection[data-count="3"] {
+    grid-template-columns: repeat(2, 170px);
+    justify-content: center;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    width: 170px;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .checkAccess2 {
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 7px;
+    font-weight: normal;
+    margin-top: -70px;
+    color: white;
+  }
+
+  .connectNew {
+    width: 90px;
+    /* Or any fixed size */
+    height: 90px;
+    padding: 0;
+    /* Remove padding to maintain perfect circle */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.281);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #forPc {
+    display: none;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #00ff75;
+    border: 2px solid;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+
+  .refresg-overlay {
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(48,192,108);
+    background: linear-gradient(90deg, rgba(48,192,108,1) 0%, rgba(26,103,59,1) 51%, rgba(0,17,7,1) 100%);*/
+    color: rgb(179, 179, 179);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .blurred {
+    filter: blur(5px);
+  }
+
+  .showBtn {
+    background-color: transparent;
+    border: #00ff75 1px solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  .txtR {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+  }
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+
+  .load {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .load2 {
+    text-align: center;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .in-header {
+    color: white;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Wrpperr {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .set-image {
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 90%;
+  }
+
+  #box1 {
+    margin-bottom: 20px;
+  }
+
+  .wrapperMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapperMain2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headerH1 {
+    font-size: 28px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+  }
+
+  #fontH {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .connect {
+    background-color: #02e25f;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+  }
+
+  .connect:hover {
+    background-color: #009e42;
+  }
+
+  .menu-item img {
+    width: 25px;
+  }
+
+  /* Inventory Container */
+  .inventory-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    border: #02e25f 1.5px solid;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .inventory-container2 {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #02e25f 1.5px solid;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* 
+  /* Background Image */
+  .inventory-image {
+    height: auto;
+    margin: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+  }
+
+  .lineImg {
+    width: 100%;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .boxWraper {
+    margin-bottom: 70px;
+  }
+
+  .nft-overlay2 {
+    position: absolute;
+    top: 21%;
+    left: 4.2%;
+    width: 80%;
+  }
+
+  .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+  }
+
+  /* Additional centering for single NFT */
+  .nft-grid[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .nft-grid[data-count="2"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  .choose {
+    color: #00ff75;
+    font-size: 16px;
+  }
+
+  .choose2 {
+    color: #00ff75;
+    font-size: 21px;
+  }
+
+  /* NFT Image */
+  .nft-image {
+    width: 190px;
+    height: auto;
+  }
+
+  /* NFT Text */
+  .nft-text {
+    font-size: 13px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .popup-containerIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dd {
+    z-index: 7;
+  }
+
+  .popup-containerIn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .popupIn {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding: 20px;
+    padding: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .popupIn h2 {
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "American Captain", sans-serif;
+  }
+
+  .popupIn img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .listBtn {
+    padding: 10px;
+    background-color: #04c253;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .listBtn:hover {
+    background: #00973f;
+  }
+
+  .popup-closeIn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .popupInTxt {
+    color: white;
+    font-size: 18px;
+  }
+
+  .successMsg {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    text-align: center;
+    color: #ffeded;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  #checkImg {
+    width: 130px;
+  }
+
+  .removeSection {
+    flex-flow: column nowrap;
+    background-color: #2222224d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .removeSection img {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+  .removeSection button {
+    background-color: #21e786;
+    color: rgb(15, 15, 15);
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .removeSection button:hover {
+    background-color: #069751;
+  }
+
+  .removeSection button:active {
+    background-color: #02e25f;
+  }
+
+  .connectNetwork {
+    background-color: #069751;
+    width: 250px;
+    text-align: center;
+    display: block;
+    border: none;
+    color: snow;
+    transition: 0.2 ease-in-out;
+  }
+
+  .connectNetwork:hover {
+    background-color: #07b963;
+  }
+
+  .backMsg {
+    z-index: 100000;
+    position: relative;
+    color: white;
+  }
+
+  .upgrades {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #02e25f;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+  }
+
+  .ldtxt {
+    color: #07b963;
+  }
+
+  .traitUpgrade {
+    background-color: #00ff75;
+    border: none;
+    padding: 7px;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .traitUpgrade:hover {
+    background-color: #03d163;
+  }
+
+  .traitUpgrade:active {
+    background-color: #029e4b;
+  }
+
+  .traitUpgradeMain {
+    background-color: #131313;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .upgrades:hover {
+    background-color: #009e42;
+    color: rgb(255, 255, 255);
+  }
+
+  .view {
+    color: white;
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .view span {
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .view img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+    width: 90%;
+  }
+
+  #popup-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  #generatedImage {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  .popup-closeInImg {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .checkAccess2 {
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 7px;
+    font-weight: normal;
+    margin-top: -70px;
+    color: white;
+  }
+
+  .connectNew {
+    width: 90px;
+    /* Or any fixed size */
+    height: 90px;
+    padding: 0;
+    /* Remove padding to maintain perfect circle */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.281);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #forMob {
+    display: none;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #00ff75;
+    border: 2px solid;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+
+  .refresg-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(48,192,108);
+    background: linear-gradient(90deg, rgba(48,192,108,1) 0%, rgba(26,103,59,1) 51%, rgba(0,17,7,1) 100%);*/
+    color: rgb(179, 179, 179);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .blurred {
+    filter: blur(5px);
+  }
+
+  .showBtn {
+    background-color: transparent;
+    border: #00ff75 1px solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  .txtR {
+    text-align: center;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+  }
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+
+  .load {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .load2 {
+    text-align: left;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .in-header {
+    color: white;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Wrpperr {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .set-image {
+    justify-content: space-between;
+  }
+
+  .wrapperMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    /* Change from height to min-height */
+    padding-top: 40px;
+    /* Add padding to account for header */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapperMain2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headerH1 {
+    font-size: 28px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+  }
+
+  #fontH {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .connect {
+    background-color: #02e25f;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+  }
+
+  .connect:hover {
+    background-color: #009e42;
+  }
+
+  .menu-item img {
+    width: 25px;
+  }
+
+  /* Inventory Container */
+  .inventory-container {
+    position: relative;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* Background Image */
+  .inventory-image {
+    height: auto;
+    margin: 5px;
+  }
+
+  .nft-overlay {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    width: 99%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .showNftsSection {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+    /* Alternative approach - you can use one of these based on your preference */
+    /* For exactly centering 1-4 items: */
+    /* grid-template-columns: repeat(auto-fit, 130px); */
+  }
+
+  /* Additional centering for single NFT */
+  .showNftsSection[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .showNftsSection[data-count="3"] {
+    grid-template-columns: repeat(2, 130px);
+    justify-content: center;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .nft-overlay2 {
+    position: absolute;
+    top: 21%;
+    left: 4.2%;
+    width: 80%;
+  }
+
+  .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+  }
+
+  /* Additional centering for single NFT */
+  .nft-grid[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .nft-grid[data-count="2"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  .choose {
+    color: #00ff75;
+    font-size: 16px;
+  }
+
+  .choose2 {
+    color: #00ff75;
+    font-size: 21px;
+  }
+
+  /* NFT Image */
+  .nft-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* NFT Text */
+  .nft-text {
+    font-size: 13px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .popup-containerIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dd {
+    z-index: 7;
+  }
+
+  .popup-containerIn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .popupIn {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding: 20px;
+    padding: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .popupIn h2 {
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "American Captain", sans-serif;
+  }
+
+  .popupIn img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .listBtn {
+    padding: 10px;
+    background-color: #04c253;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .listBtn:hover {
+    background: #00973f;
+  }
+
+  .popup-closeIn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .popupInTxt {
+    color: white;
+    font-size: 18px;
+  }
+
+  .successMsg {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    text-align: center;
+    color: #ffeded;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  #checkImg {
+    width: 130px;
+  }
+
+  .removeSection {
+    flex-flow: column nowrap;
+    background-color: #2222224d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .removeSection img {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+  .removeSection button {
+    background-color: #21e786;
+    color: rgb(15, 15, 15);
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .removeSection button:hover {
+    background-color: #069751;
+  }
+
+  .removeSection button:active {
+    background-color: #02e25f;
+  }
+
+  .connectNetwork {
+    background-color: #069751;
+    width: 250px;
+    text-align: center;
+    display: block;
+    border: none;
+    color: snow;
+    transition: 0.2 ease-in-out;
+  }
+
+  .connectNetwork:hover {
+    background-color: #07b963;
+  }
+
+  .backMsg {
+    z-index: 100000;
+    position: relative;
+    color: white;
+  }
+
+  .upgrades {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #02e25f;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+  }
+
+  .ldtxt {
+    color: #07b963;
+  }
+
+  .traitUpgrade {
+    background-color: #00ff75;
+    border: none;
+    padding: 7px;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .traitUpgrade:hover {
+    background-color: #03d163;
+  }
+
+  .traitUpgrade:active {
+    background-color: #029e4b;
+  }
+
+  .traitUpgradeMain {
+    background-color: #131313;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .upgrades:hover {
+    background-color: #009e42;
+    color: rgb(255, 255, 255);
+  }
+
+  .view {
+    color: white;
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .view span {
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .view img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+  }
+
+  #popup-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  #generatedImage {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  .popup-closeInImg {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .checkAccess2 {
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 7px;
+    font-weight: normal;
+    margin-top: -70px;
+    color: white;
+  }
+
+  .connectNew {
+    width: 90px;
+    /* Or any fixed size */
+    height: 90px;
+    padding: 0;
+    /* Remove padding to maintain perfect circle */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.281);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #forMob {
+    display: none;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #00ff75;
+    border: 2px solid;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+
+  .refresg-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(48,192,108);
+    background: linear-gradient(90deg, rgba(48,192,108,1) 0%, rgba(26,103,59,1) 51%, rgba(0,17,7,1) 100%);*/
+    color: rgb(179, 179, 179);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .blurred {
+    filter: blur(5px);
+  }
+
+  .showBtn {
+    background-color: transparent;
+    border: #00ff75 1px solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  .txtR {
+    text-align: center;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+  }
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+
+  .load {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .load2 {
+    text-align: left;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .in-header {
+    color: white;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Wrpperr {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .set-image {
+    justify-content: space-between;
+  }
+
+  .wrapperMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    /* Change from height to min-height */
+    padding-top: 40px;
+    /* Add padding to account for header */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapperMain2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headerH1 {
+    font-size: 35px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+  }
+
+  #fontH {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .connect {
+    background-color: #02e25f;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+  }
+
+  .connect:hover {
+    background-color: #009e42;
+  }
+
+  .menu-item img {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  /* Inventory Container */
+  .inventory-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  /* Background Image */
+  .inventory-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nft-overlay {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    width: 99%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .showNftsSection {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+    /* Alternative approach - you can use one of these based on your preference */
+    /* For exactly centering 1-4 items: */
+    /* grid-template-columns: repeat(auto-fit, 130px); */
+  }
+
+  /* Additional centering for single NFT */
+  .showNftsSection[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .showNftsSection[data-count="3"] {
+    grid-template-columns: repeat(2, 130px);
+    justify-content: center;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .nft-overlay2 {
+    position: absolute;
+    top: 21%;
+    left: 4.2%;
+    width: 80%;
+  }
+
+  .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+  }
+
+  /* Additional centering for single NFT */
+  .nft-grid[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .nft-grid[data-count="2"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  .choose {
+    color: #00ff75;
+    font-size: 16px;
+  }
+
+  .choose2 {
+    color: #00ff75;
+    font-size: 21px;
+  }
+
+  /* NFT Image */
+  .nft-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* NFT Text */
+  .nft-text {
+    font-size: 13px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .popup-containerIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dd {
+    z-index: 7;
+  }
+
+  .popup-containerIn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .popupIn {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding: 20px;
+    padding: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .popupIn h2 {
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "American Captain", sans-serif;
+  }
+
+  .popupIn img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .listBtn {
+    padding: 10px;
+    background-color: #04c253;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .listBtn:hover {
+    background: #00973f;
+  }
+
+  .popup-closeIn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .popupInTxt {
+    color: white;
+    font-size: 18px;
+  }
+
+  .successMsg {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    text-align: center;
+    color: #ffeded;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  #checkImg {
+    width: 130px;
+  }
+
+  .removeSection {
+    flex-flow: column nowrap;
+    background-color: #2222224d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .removeSection img {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+  .removeSection button {
+    background-color: #21e786;
+    color: rgb(15, 15, 15);
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .removeSection button:hover {
+    background-color: #069751;
+  }
+
+  .removeSection button:active {
+    background-color: #02e25f;
+  }
+
+  .connectNetwork {
+    background-color: #069751;
+    width: 250px;
+    text-align: center;
+    display: block;
+    border: none;
+    color: snow;
+    transition: 0.2 ease-in-out;
+  }
+
+  .connectNetwork:hover {
+    background-color: #07b963;
+  }
+
+  .backMsg {
+    z-index: 100000;
+    position: relative;
+    color: white;
+  }
+
+  .upgrades {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #02e25f;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+  }
+
+  .ldtxt {
+    color: #07b963;
+  }
+
+  .traitUpgrade {
+    background-color: #00ff75;
+    border: none;
+    padding: 7px;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .traitUpgrade:hover {
+    background-color: #03d163;
+  }
+
+  .traitUpgrade:active {
+    background-color: #029e4b;
+  }
+
+  .traitUpgradeMain {
+    background-color: #131313;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .upgrades:hover {
+    background-color: #009e42;
+    color: rgb(255, 255, 255);
+  }
+
+  .view {
+    color: white;
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .view span {
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .view img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+  }
+
+  #popup-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  #generatedImage {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  .popup-closeInImg {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .checkAccess2 {
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 7px;
+    font-weight: normal;
+    margin-top: -70px;
+    color: white;
+  }
+
+  .connectNew {
+    width: 90px;
+    /* Or any fixed size */
+    height: 90px;
+    padding: 0;
+    /* Remove padding to maintain perfect circle */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.281);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #forMob {
+    display: none;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #00ff75;
+    border: 2px solid;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+
+  .refresg-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    /*background: rgb(48,192,108);
+  background: linear-gradient(90deg, rgba(48,192,108,1) 0%, rgba(26,103,59,1) 51%, rgba(0,17,7,1) 100%);*/
+    color: rgb(179, 179, 179);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .blurred {
+    filter: blur(5px);
+  }
+
+  .showBtn {
+    background-color: transparent;
+    border: #00ff75 1px solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  .txtR {
+    text-align: center;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+  }
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+
+  .load {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .load2 {
+    text-align: left;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .in-header {
+    color: white;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Wrpperr {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .set-image {
+    justify-content: space-between;
+  }
+
+  .wrapperMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    /* Change from height to min-height */
+    padding-top: 40px;
+    /* Add padding to account for header */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapperMain2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headerH1 {
+    font-size: 35px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+  }
+
+  #fontH {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .connect {
+    background-color: #02e25f;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+  }
+
+  .connect:hover {
+    background-color: #009e42;
+  }
+
+  .menu-item img {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  /* Inventory Container */
+  .inventory-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  /* Background Image */
+  .inventory-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nft-overlay {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    width: 99%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .showNftsSection {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+    /* Alternative approach - you can use one of these based on your preference */
+    /* For exactly centering 1-4 items: */
+    /* grid-template-columns: repeat(auto-fit, 130px); */
+  }
+
+  /* Additional centering for single NFT */
+  .showNftsSection[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .showNftsSection[data-count="3"] {
+    grid-template-columns: repeat(2, 130px);
+    justify-content: center;
+  }
+
+  /* NFT Card */
+  .nft-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffffff48;
+    border-radius: 8px;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .nft-overlay2 {
+    position: absolute;
+    top: 21%;
+    left: 4.2%;
+    width: 80%;
+  }
+
+  .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Dynamic grid columns based on NFT count */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+  }
+
+  /* Additional centering for single NFT */
+  .nft-grid[data-count="1"] {
+    grid-template-columns: 130px;
+    justify-content: center;
+  }
+
+  /* Additional centering for two NFTs */
+  .nft-grid[data-count="2"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  /* Additional centering for three NFTs */
+  .nft-grid[data-count="3"] {
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+  }
+
+  .choose {
+    color: #00ff75;
+    font-size: 16px;
+  }
+
+  .choose2 {
+    color: #00ff75;
+    font-size: 21px;
+  }
+
+  /* NFT Image */
+  .nft-image {
+    width: 100%;
+  }
+
+  /* NFT Text */
+  .nft-text {
+    font-size: 13px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .popup-containerIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dd {
+    z-index: 7;
+  }
+
+  .popup-containerIn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    /* Changed to solid black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .popupIn {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .popupIn2 {
+    padding: 20px;
+    padding: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .popupIn h2 {
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "American Captain", sans-serif;
+  }
+
+  .popupIn img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .listBtn {
+    padding: 10px;
+    background-color: #04c253;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .listBtn:hover {
+    background: #00973f;
+  }
+
+  .popup-closeIn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .popupInTxt {
+    color: white;
+    font-size: 18px;
+  }
+
+  .successMsg {
+    text-align: center;
+    color: #00ff75;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    text-align: center;
+    color: #ffeded;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  #checkImg {
+    width: 130px;
+  }
+
+  .removeSection {
+    flex-flow: column nowrap;
+    background-color: #2222224d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .removeSection img {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+  .removeSection button {
+    background-color: #21e786;
+    color: rgb(15, 15, 15);
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .removeSection button:hover {
+    background-color: #069751;
+  }
+
+  .removeSection button:active {
+    background-color: #02e25f;
+  }
+
+  .connectNetwork {
+    background-color: #069751;
+    width: 250px;
+    text-align: center;
+    display: block;
+    border: none;
+    color: snow;
+    transition: 0.2 ease-in-out;
+  }
+
+  .connectNetwork:hover {
+    background-color: #07b963;
+  }
+
+  .backMsg {
+    z-index: 100000;
+    position: relative;
+    color: white;
+  }
+
+  .upgrades {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #02e25f;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+  }
+
+  .ldtxt {
+    color: #07b963;
+  }
+
+  .traitUpgrade {
+    background-color: #00ff75;
+    border: none;
+    padding: 7px;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .traitUpgrade:hover {
+    background-color: #03d163;
+  }
+
+  .traitUpgrade:active {
+    background-color: #029e4b;
+  }
+
+  .traitUpgradeMain {
+    background-color: #131313;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .upgrades:hover {
+    background-color: #009e42;
+    color: rgb(255, 255, 255);
+  }
+
+  .view {
+    color: white;
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .view span {
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .view img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+  }
+
+  #popup-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  #generatedImage {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  .popup-closeInImg {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
+}
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.trait-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.preview-btn {
+  height: fit-content;
+}
+
+.preview-btn,
+.traitUpgrade {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.preview-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.traitUpgrade {
+  background-color: #2196f3;
+  color: white;
+}
+
+.preview-btn:hover {
+  background-color: #45a049;
+}
+
+.traitUpgrade:hover {
+  background-color: #0b7dda;
+}
+
+.preview-loader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.preview-btn {
+  min-width: 150px;
+  /* Ensure consistent button width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#previewId:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #2e7d32;
+}
+
+#previewId {
+  background-color: #4caf50;
+}
+
+.in-header {
+  z-index: 1;
+  position: relative;
+}
+
+#forMob {
+  z-index: 1;
+  position: relative;
+}
+
+.popup-containerIn {
+  z-index: 1;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #02e25f;
+}
+
+.back-button svg {
+  transition: transform 0.2s ease;
+}
+
+.back-button:hover svg {
+  transform: translateX(-4px);
+}
+
+#popupInUp {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+#popupInUp::-webkit-scrollbar {
+  width: 5px;
+}
+
+#popupInUp::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#popupInUp::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.removeSection img {
+  width: 50%;
+}
+
+.popup-containerInTraits {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.781);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.popupInTraits {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  max-width: 95%;
+  max-height: 90vh;
+  animation: slideIn 0.3s ease-out;
+  background: rgba(255, 255, 255, 0.397);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-scrollable-content {
+  overflow-y: auto;
+  flex: 1;
+  margin: 10px 0;
+}
+
+.popupIn-content {
+  color: white;
+  font-size: 18px;
+}
+
+.trait-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2222224d;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.trait-info {
+  flex: 1;
+  padding-right: 15px;
+  min-width: 0;
+  /* Prevent flex overflow */
+}
+
+.trait-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.trait-section button {
+  background-color: #21e786;
+  color: rgb(15, 15, 15);
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100px;
+  border-radius: 4px;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .popupInTraits {
+    padding: 15px;
+    max-width: 90%;
+    max-height: 85vh;
+  }
+
+  .trait-section {
+    padding: 12px;
+  }
+
+  .trait-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .trait-info {
+    font-size: 14px;
+    padding-right: 10px;
+  }
+
+  .trait-section button {
+    padding: 6px 10px;
+    font-size: 12px;
+    max-width: 80px;
+  }
+
+  .view {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  .trait-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .trait-info {
+    font-size: 15px;
+  }
+}
+
+/* Add this to your existing CSS */
+
+/* For mobile devices (up to 767px) */
+@media screen and (max-width: 767px) {
+
+  /* Drone section specific styles */
+  .nft-overlay--2 .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Show 2 items per row on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+  }
+
+  .nft-overlay--2 .nft-card {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .nft-overlay--2 .nft-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nft-overlay--2 .choose2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  /* Make sure the overlay takes full width */
+  .nft-overlay {
+    width: 100%;
+    left: 0;
+    padding: 10px;
+  }
+
+  /* Specific fix for the drone section in mobile */
+  .nft-overlay--2 {
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Ensure the drone cards don't overflow */
+  .inventory-container2 {
+    overflow-x: hidden;
+  }
+}
+
+/* For tablets (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .nft-overlay--2 .nft-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nft-overlay--2 .nft-card {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+
+  /* Drone section specific styles */
+  .nft-overlay--2 .nft-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    /* Show 2 items per row on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+  }
+
+  .nft-overlay--2 .nft-card {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .nft-overlay--2 .nft-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nft-overlay--2 .choose2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  /* Make sure the overlay takes full width */
+  .nft-overlay {
+    width: 100%;
+    left: 0;
+    padding: 10px;
+  }
+
+  /* Specific fix for the drone section in mobile */
+  .nft-overlay--2 {
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Ensure the drone cards don't overflow */
+  .inventory-container2 {
+    overflow-x: hidden;
+  }
+}
+
+/* For tablets (768px to 991px) */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .nft-overlay--2 .nft-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nft-overlay--2::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nft-overlay--2 .nft-card {
+    max-width: 180px;
+  }
+}
+
+/* Overlay that covers the entire screen */
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Main popup container */
+.confirmation-popup {
+  background-color: #2a2a2a;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 5px solid #414040;
+}
+
+/* Warning triangle icon */
+.confirmation-popup::before {
+  content: "⚠";
+  display: block;
+  font-size: 110px;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Main heading */
+.confirmation-popup h2 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Content container */
+.confirmation-content {
+  margin: 20px 0 30px 0;
+}
+
+/* First paragraph (CONFIRMATION) */
+.confirmation-content p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Buttons container */
+.confirmation-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Button base styles */
+.confirm-button,
+.cancel-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+  font-weight: bold;
+}
+
+/* Confirm button (YES, UPGRADE) */
+.confirm-button {
+  background-color: #636363;
+  color: #ffffff;
+  border: 4px solid #414040;
+  font-weight: bold;
+}
+
+.confirm-button:hover {
+  background-color: #555;
+  transform: translateY(-1px);
+}
+
+.confirm-button:active {
+  transform: translateY(0);
+}
+
+/* Cancel button */
+.cancel-button {
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border: 4px solid #414040;
+  font-weight: bold;
+}
+
+.cancel-button:hover {
+  background-color: #555;
+  transform: translateY(-1px);
+}
+
+.cancel-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .confirmation-popup {
+    padding: 30px 25px;
+    margin: 20px;
+  }
+
+  .confirmation-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .confirm-button,
+  .cancel-button {
+    width: 100%;
+  }
+
+  /* Main heading */
+  .confirmation-popup h2 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Content container */
+  .confirmation-content {
+    margin: 20px 0 30px 0;
+  }
+
+  /* First paragraph (CONFIRMATION) */
+  .confirmation-content p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .confirmation-popup::before {
+    content: "⚠";
+    display: block;
+    font-size: 90px;
+    color: #ffd700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Button Styles */
+.connectNew {
+  background-color: rgba(255, 255, 255, 0.281);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+/* Centered Check Access Button */
+.check-access-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  font-size: 16px;
+}
+
+/* Bottom Connect Button */
+.connect-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 767px) {
+  .check-access-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+
+  .connect-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .check-access-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .connect-btn {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .check-access-btn {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
+
+  .connect-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+  font-family: "Your Font Family", sans-serif;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #02e25f;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.connect-btn {
+  background-color: #3fff90;
+  color: black;
+
+  height: fit-content;
+  width: fit-content;
+
+  margin: auto 0;
+  padding: 0.5em 2em;
+  border-radius: 0.3em;
+
+  position: absolute;
+  bottom: 97%;
+  left: 50%;
+  right: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.check-access-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+
+  width: fit-content;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  padding: 0.5em;
+  border-radius: 999px;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+
+  position: absolute;
+  top: 38.2%;
+  left: 0;
+  right: 0;
+  transform: translate(0, 0);
+}
+
+@media screen and (min-width: 350px) {
+  .check-access-btn {
+    top: 37.5%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+
+  .connect-btn,
+  .check-access-btn {
+    font-size: 18px;
+  }
+
+  .check-access-btn {
+    top: 0;
+    bottom: 0;
+    transform: translate(2%, -1.5%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .connect-btn {
+    bottom: auto;
+    top: 0;
+
+    font-size: 19px;
+  }
+
+  .check-access-btn {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .connect-btn,
+  .check-access-btn {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .connect-btn,
+  .check-access-btn {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+
+  .connect-btn,
+  .check-access-btn {
+    font-size: 24px;
+  }
+}
+
+.scanner-container {
+  height: 95%;
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+}
+
+.scanner-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+.selected-nft-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.selected-nft-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.selected-nft-header h3 {
+  color: #02e25f;
+  margin: 0;
+  font-size: 18px;
+}
+
+.show-all-btn {
+  background: linear-gradient(45deg, #02e25f, #00b84d);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.show-all-btn:hover {
+  background: linear-gradient(45deg, #00b84d, #02e25f);
+  transform: translateY(-2px);
+}
+
+.selected-nft-container {
+  display: flex;
+  justify-content: center;
+}
+
+.selected-nft-card {
+  animation: selectPulse 2s infinite;
+}
+
+@keyframes selectPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(2, 226, 95, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(2, 226, 95, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(2, 226, 95, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .selected-nft-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .selected-nft-header h3 {
+    font-size: 16px;
+  }
+
+  .show-all-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+.single-preview-section {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.preview-all-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.upgrade-buttons-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.pagination-btn {
+  background: #02e25f;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #01c94d;
+  transform: scale(1.1);
+}
+
+.pagination-btn:disabled {
+  cursor: not-allowed;
+  background: #666;
+}
+
+.pagination-info {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* For screens with small height */
+@media screen and (max-height: 600px) {
+  .wrapperMain {
+    padding-top: 60px;
+    min-height: auto;
+  }
+
+  .in-header {
+    padding: 5px 0;
+    margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+  }
+
+  .Wrpperr {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .wrapperMain {
+    padding-top: 50px;
+  }
+
+  .in-header {
+    font-size: 14px;
+  }
+
+  .connect {
+    padding: 6px;
+    font-size: 12px;
+    width: 120px;
+  }
+}
+
+.in-header {
+  color: white;
+  border-bottom: 2px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  /* Add this */
+  /* Add this to ensure it stays on top */
+  padding: 10px 0;
+  /* Adjust padding */
+}
+
+.set-image {
+  margin-bottom: 20px;
+}
+
+
+/* Button Styles */
+.connectNew {
+  background-color: rgba(255, 255, 255, 0.281);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered Check Access Button */
+.check-access-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  font-size: 16px;
+}
+
+/* Bottom Connect Button */
+.connect-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 767px) {
+  .check-access-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+
+  .connect-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .check-access-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .connect-btn {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .check-access-btn {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
+
+  .connect-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+  font-family: "Your Font Family", sans-serif;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #02e25f;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.connect-btn {
+  background-color: #3fff90;
+  color: black;
+
+  height: fit-content;
+  width: fit-content;
+
+  margin: auto 0;
+  padding: 0.5em 2em;
+  border-radius: 0.3em;
+
+  position: absolute;
+  bottom: 97%;
+  left: 50%;
+  right: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.check-access-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+
+  width: fit-content;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  padding: 0.5em;
+  border-radius: 999px;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+
+  position: absolute;
+  top: 38.2%;
+  left: 0;
+  right: 0;
+  transform: translate(0, 0);
+}
+
+@media screen and (min-width: 350px) {
+  .check-access-btn {
+    top: 37.5%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .connect-btn,
+  .check-access-btn {
+    font-size: 18px;
+  }
+
+  .check-access-btn {
+    top: 0;
+    bottom: 0;
+    transform: translate(2%, -1.5%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .connect-btn {
+    bottom: auto;
+    top: 0;
+
+    font-size: 19px;
+  }
+
+  .check-access-btn {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .connect-btn,
+  .check-access-btn {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .connect-btn,
+  .check-access-btn {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .connect-btn,
+  .check-access-btn {
+    font-size: 24px;
+  }
+}
+
+.scanner-container {
+  height: 95%;
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+}
+
+.scanner-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.workshop-video-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 5px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workshop-video-container-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ba8235;
+  text-align: center;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .workshop-video-container {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .workshop-video-container-text {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .workshop-video-container-text {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .workshop-video-container-text {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .workshop-video-container-text {
+    font-size: 60px;
+  }
+}
+
+/* Loading Progress Styles */
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.loading-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #02e25f;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #02e25f 0%, #00ff6a 100%);
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  transform-origin: left;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+.progress-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #02e25f;
+  min-width: 40px;
+  text-align: center;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .loading-text {
+    font-size: 16px;
+  }
+  
+  .progress-container {
+    max-width: 250px;
+  }
+  
+  .progress-bar {
+    height: 6px;
+  }
+}
