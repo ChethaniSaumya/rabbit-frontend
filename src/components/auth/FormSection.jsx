@@ -1,5 +1,5 @@
-import logoWebp from "../../assets/images/logo.webp";
-import logoPng from "../../assets/images/logo.png";
+import logoWebp from "../../assets/logo.webp";
+import logoPng from "../../assets/logo.png";
 
 const FormSection = ({ handleSubmit, children }) => {
   return (
